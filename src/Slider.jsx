@@ -34,7 +34,7 @@ if (inputValue > 75 && inputValue <= 100){
 
     return (
         <div>
-            <SliderComponent inputValue={inputValue} handleInputChange = {handleInputChange} backgroundColor={bgColor} textColor={textColor}/>
+            <SliderComponent inputValue={inputValue} handleInputChange = {handleInputChange} backgroundColor={bgColor} tekstoSpalva={textColor}/>
         </div>
     );
 }

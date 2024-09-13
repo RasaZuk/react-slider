@@ -1,6 +1,6 @@
 
 // eslint-disable-next-line react/prop-types
-function SliderComponent({inputValue, handleInputChange}, backgroundColor, tekstoSpalva) {
+function SliderComponent({inputValue, handleInputChange, backgroundColor, tekstoSpalva}) {
 
 const inputStyle = {
     appearance: "none",
@@ -13,25 +13,24 @@ const inputStyle = {
     return (
         <div style={{
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column",
-        gap: 100
+        margin: "10rem",
+        gap: 50,
+        width: "20rem",
         }}>
             <input type="range" min={0} max={100} value={inputValue} onInput={handleInputChange} style={inputStyle}/>
 
-    <div className="circle" style={{
-        color: !tekstoSpalva ? "black" : tekstoSpalva,
-        background: !backgroundColor ? "lightgrey" : backgroundColor,
-        height: `${inputValue *3}px`,
-        width: `${inputValue *2}px`,
-        borderRadius: "50%"
+            <div className="circle" style={{
+            color: !tekstoSpalva ? "black" : tekstoSpalva,
+            background: !backgroundColor ? "lightgrey" : backgroundColor,
+            height: `${inputValue *1}px`,
+            width: `${inputValue *1}px`,
+            borderRadius: "50%"
     }}>
-        <span>{inputValue}</span>
-
-    </div>
-
-
+            <span>{inputValue}</span>
+            </div>
         </div>
     )
 }
